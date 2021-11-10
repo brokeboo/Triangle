@@ -11,11 +11,20 @@ namespace Triangle
         public double a; //первая сторона
         public double b; //вторая сторона
         public double c; //третья сторона
+        public double ha; //высота к стороне a
         public Triangle(double A, double B, double C) // Конструктор
         {
             a = A; // создаём с заданными длинами сторон согласно заданию
             b = B;
             c = C;
+        }
+        public Triangle() // Конструктор, создающий треугольник не имея его параметров 
+        {
+        }
+        public Triangle(double A, double HA) //Конструктор, создающий треугольник имея основание и высоту(которая проведена к основанию)
+        {
+            a = A; // основание
+            ha = HA;// высота проведенная к основанию
         }
         public string outputA() // выводим строку a, данный метод возвращает строковое значени
         {
@@ -69,13 +78,20 @@ namespace Triangle
             get
             {
                 if ((a > b + c) && (b > a + c) && (c > a + b))//сумма 2 сторон должна быть больше третьей
-                {
-                    return false;
-                }
-                else
-                {
+
                     return true;
-                }
+                    else return false;
+            }
+        }
+        public string TriangleType // Свойство, которое позволяет установить, существует ли треугольник с задаными сторонами
+        {
+            get
+            {
+                if (a == b && a == c && b == c)
+                    return "равносторонний";
+                else if (a == b || a == c || b == c)
+                    return "равнобедренный";
+                else return "равносторонний";
             }
         }
     }
