@@ -37,6 +37,9 @@
             this.txtA = new System.Windows.Forms.TextBox();
             this.txtB = new System.Windows.Forms.TextBox();
             this.txtC = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,10 +93,31 @@
             resources.ApplyResources(this.txtC, "txtC");
             this.txtC.Name = "txtC";
             // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label1.Name = "label1";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label2.Name = "label2";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label3.Name = "label3";
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtC);
             this.Controls.Add(this.txtB);
             this.Controls.Add(this.txtA);
@@ -119,6 +143,9 @@
         private System.Windows.Forms.TextBox txtA;
         private System.Windows.Forms.TextBox txtB;
         private System.Windows.Forms.TextBox txtC;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 
